@@ -339,13 +339,3 @@ terraform destroy
 - **Updates**: Keep AWS provider version updated for latest features and security patches
 
 ---
-
-## License
-
-Internal use only
-
----
-
-## Contact
-
-For questions or modifications, refer to the infrastructure team.
