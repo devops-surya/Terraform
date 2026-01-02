@@ -10,9 +10,20 @@ This Terraform configuration creates a production-ready AWS VPC infrastructure w
 
 ### Architecture Diagram
 
-**Visual Diagram:** [View Interactive Diagram](VPC_Architecture_Diagram_Clear.drawio)
+**📊 [View VPC Architecture Diagram](VPC_Architecture_Diagram_Clear.drawio)**
 
-> **Note:** The draw.io file can be viewed directly on GitHub or opened with [draw.io](https://app.diagrams.net/) for an interactive visualization.
+> **How to View:**
+> - **On GitHub**: Click the link above - GitHub will render the `.drawio` file directly in the browser
+> - **Interactive Editing**: Open with [draw.io](https://app.diagrams.net/) or use the [VS Code draw.io extension](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio)
+> - **Offline**: Download and open with [draw.io Desktop](https://github.com/jgraph/drawio-desktop/releases)
+>
+> The diagram illustrates a production-ready multi-AZ VPC architecture with:
+> - 3 Availability Zones (us-east-1a, us-east-1b, us-east-1c)
+> - 3 Public Subnets (10.0.1.0/24, 10.0.2.0/24, 10.0.3.0/24)
+> - 3 Private Subnets (10.0.11.0/24, 10.0.12.0/24, 10.0.13.0/24)
+> - 3 NAT Gateways (one per AZ) with Elastic IPs
+> - Internet Gateway for public internet access
+> - Route tables showing traffic flow patterns
 
 **Text-Based Diagram:**
 
