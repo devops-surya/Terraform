@@ -8,12 +8,12 @@
 
 terraform {
   # Uncomment and configure after state-backend resources are created
-
+  
    backend "s3" {
-     bucket         = "terraform-state-backend-vpc-normal-production-440744235311"
-     key            = "vpc-normal/terraform.tfstate"
+     bucket         = "terraform-state-backend-vpcmodule-production-440744235311"
+     key            = "vpc-module/terraform.tfstate"
      region         = "us-east-1"
-     dynamodb_table = "terraform-state-lock-vpcnormal-production"
+     dynamodb_table = "terraform-state-lock-vpcmodule-production"
      encrypt        = true
    }
 }

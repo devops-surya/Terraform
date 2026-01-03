@@ -1,10 +1,10 @@
 # Create S3 bucket for Terraform state
 resource "aws_s3_bucket" "terraform_state" {
-  bucket        = "${var.s3_bucket_name}-vpc-normal-${var.environment}-${data.aws_caller_identity.current.account_id}"
+  bucket        = "${var.s3_bucket_name}-vpcmodule-${var.environment}-${data.aws_caller_identity.current.account_id}"
   force_destroy = true
 
   tags = {
-    Name = "${var.s3_bucket_name}-${var.environment}"
+    Name = "${var.s3_bucket_name}-vpcmodule-${var.environment}"
   }
 }
 
@@ -56,9 +56,9 @@ resource "aws_s3_bucket_lifecycle_configuration" "terraform_state" {
 
 # Create DynamoDB table for state locking
 resource "aws_dynamodb_table" "terraform_lock" {
-  name         = "${var.dynamodb_table_name}-vpcnormal-${var.environment}"
-  billing_mode = "PAY_PER_REQUEST"
-  hash_key     = "LockID"
+  name           = "${var.dynamodb_table_name}-vpcmodule-${var.environment}"
+  billing_mode   = "PAY_PER_REQUEST"
+  hash_key       = "LockID"
 
   attribute {
     name = "LockID"
@@ -74,7 +74,7 @@ resource "aws_dynamodb_table" "terraform_lock" {
   }
 
   tags = {
-    Name = "${var.dynamodb_table_name}-${var.environment}"
+    Name = "${var.dynamodb_table_name}-vpcmodule-${var.environment}"
   }
 }
 

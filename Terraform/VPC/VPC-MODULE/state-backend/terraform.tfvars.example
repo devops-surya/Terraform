@@ -1,0 +1,7 @@
+aws_region           = "us-east-1"
+project_name         = "my-project"
+environment          = "production"
+s3_bucket_name       = "terraform-state-backend"
+dynamodb_table_name  = "terraform-state-lock"
+enable_versioning    = true
+enable_server_side_encryption = true
